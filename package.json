@@ -1,0 +1,17 @@
+{
+  "name": "bot_noi_tu",
+  "description": "Bot chơi nối từ nhưng phần từ vựng vẫn còn thiếu sót:D",
+  "version": "0.1",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Pham Huynh Anh",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security"
+  }
+}
