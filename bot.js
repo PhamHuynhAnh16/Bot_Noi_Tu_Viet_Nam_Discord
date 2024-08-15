@@ -20,6 +20,32 @@ client.on('messageCreate', async message => {
 
     const nội_dung = message.content.trim().toLowerCase();
     const từ = nội_dung.split(' ');
+    
+    if (từ[0] === '!add') 
+    {
+        if (từ.length === 3)
+        {
+            let ids = fs.readFileSync('TuVung.txt', 'utf8').split('\n');
+            const thêm = `${từ[1]} ${từ[2]}`
+            if (!ids.includes(thêm)) 
+            {
+                ids.push(thêm); 
+                fs.writeFileSync('TuVung.txt', ids.join('\n')); 
+    
+                await message.reply(`Đã thêm từ: ${thêm}`);
+            }
+        } 
+        else return await message.reply(`Từ ${thêm} đã có trong từ điển`);    
+    } 
+
+    if (message.content.toLowerCase() === '!reset')
+    {
+        if (message.user.id === process.env.AUTHOR) return message.reply("Chỉ có Author mới có thể thêm từ");
+        cụm_từ_trước_đó = '';
+        người_dùng_trước_đó = '';
+        cụm_từ_đã_dùng = [];
+        return message.reply('Đã đặt lại trò chơi');
+    }
 
     if (từ.length !== 2) return;
 
