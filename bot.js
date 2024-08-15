@@ -34,8 +34,8 @@ client.on('messageCreate', async message => {
     
                 await message.reply(`Đã thêm từ: ${thêm}`);
             }
-        } 
-        else return await message.reply(`Từ ${thêm} đã có trong từ điển`);    
+            else return await message.reply(`Từ ${thêm} đã có trong từ điển`);    
+        }
     } 
 
     if (message.content.toLowerCase() === '!reset')
