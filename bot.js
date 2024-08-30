@@ -40,7 +40,7 @@ client.on('messageCreate', async message => {
 
     if (message.content.toLowerCase() === '!reset')
     {
-        if (process.env.GIOI_HAN_RESET && message.user.id === process.env.AUTHOR.split(",")) return message.reply("Chỉ có Author mới có thể thêm từ");
+        if (process.env.GIOI_HAN_RESET && message.user.id === process.env.NGUOI_CO_THE_RESET.split(",")) return message.reply("Chỉ có Author mới có thể thêm từ");
 
         cụm_từ_trước_đó = '';
         người_dùng_trước_đó = '';
